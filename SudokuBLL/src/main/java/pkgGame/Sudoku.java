@@ -8,8 +8,19 @@ public class Sudoku extends LatinSquare{
 	private int iSqrtSize;
 	
 	
-	public Sudoku() {
-		super();
+	public Sudoku(int iSize) {
+		double SqrtSize = Math.sqrt(iSize);
+		try {
+		if (iSize%SqrtSize == 0) {
+			this.iSize = iSize;
+			this.iSqrtSize = (int) SqrtSize;
+	    }
+		else {
+		catch(exception e) {
+			throw e;
+		}
+		}
+	}
 	}
 	public Sudoku(int[][] latinSquare) {
 		super(latinSquare);
